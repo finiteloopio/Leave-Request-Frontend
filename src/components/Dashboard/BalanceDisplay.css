@@ -1,0 +1,60 @@
+.balance-cards-container {
+  display: grid;
+  /* Adjust grid columns based on the number of items */
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.balance-cards-container.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100px;
+}
+
+.balance-card {
+  /* THE FIX: Plain white background with a border */
+  background-color: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.balance-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.12);
+}
+
+.balance-number {
+  font-size: 36px;
+  font-weight: 700;
+  margin: 0;
+  line-height: 1;
+  /* THE FIX: Black text */
+  color: #111827;
+}
+
+.balance-label {
+  font-size: 14px;
+  font-weight: 500;
+  margin-top: 8px;
+  /* THE FIX: Dark gray text */
+  color: #374151;
+}
+
+/* Feedback message styles */
+.feedback-message {
+  text-align: center;
+  padding: 12px;
+  border-radius: 8px;
+  font-weight: 500;
+  margin-bottom: 16px;
+}
+.feedback-message.error {
+  background-color: #fee2e2;
+  color: #991b1b;
+}

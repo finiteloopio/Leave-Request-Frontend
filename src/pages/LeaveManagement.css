@@ -1,0 +1,178 @@
+/* Leave Management Main Container */
+
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  overflow-y: auto !important;
+  overflow-x: hidden;
+}
+.leave-management-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  overflow: hidden; /* Keep this - we want .main-content to handle scrolling */
+  background-color: #ffffff;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  width: 100%;
+}
+
+.leave-management-content {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  overflow: hidden;
+  min-height: 0;
+}
+
+/* Header */
+.leave-management-header {
+  padding: 32px 24px 24px;
+  flex-shrink: 0;
+  background-color: #ffffff;
+}
+
+.header-title {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 8px;
+  color: #374151;
+}
+
+.back-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin-right: 8px;
+  font-size: 20px;
+  color: #374151;
+  padding: 4px 8px;
+  border-radius: 4px;
+  transition: background-color 0.2s ease;
+}
+
+.back-button:hover {
+  background-color: #f3f4f6;
+}
+
+.main-title {
+  font-size: 24px;
+  font-weight: 600;
+  color: #111827;
+  margin: 0;
+}
+
+.main-subtitle {
+  color: #6b7280;
+  margin: 0;
+  font-size: 16px;
+}
+
+/* Navigation Tabs */
+.tabs-container {
+  background-color: #f3f4f6;
+  padding: 16px 0;
+  flex-shrink: 0;
+}
+
+.tabs {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 24px;
+  max-width: none;
+}
+
+.tab {
+  background: none;
+  border: none;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  padding: 8px 16px;
+  color: #6b7280;
+  border-radius: 4px;
+  transition: color 0.2s ease;
+}
+
+.tab.active {
+  color: #111827;
+}
+
+.tab:hover {
+  color: #111827;
+}
+
+/* Main Content - SCROLLABLE SECTION */
+.main-content {
+  padding: 32px 24px;
+  padding-bottom: 120px; /* Extra space for bottom nav + buffer */
+  flex: 1;
+  overflow-y: auto;
+  overflow-x: hidden;
+  min-height: 0;
+}
+
+/* Custom Scrollbar Styling */
+.main-content::-webkit-scrollbar {
+  width: 8px;
+}
+
+.main-content::-webkit-scrollbar-track {
+  background: #f3f4f6;
+}
+
+.main-content::-webkit-scrollbar-thumb {
+  background: #d1d5db;
+  border-radius: 4px;
+}
+
+.main-content::-webkit-scrollbar-thumb:hover {
+  background: #9ca3af;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .leave-management-header {
+    padding: 24px 16px 20px;
+  }
+
+  .main-title {
+    font-size: 20px;
+  }
+
+  .main-subtitle {
+    font-size: 14px;
+  }
+
+  .tabs {
+    padding: 0 16px;
+  }
+
+  .main-content {
+    padding: 24px 16px;
+    padding-bottom: 120px;
+  }
+}
+
+@media (max-width: 480px) {
+  .leave-management-header {
+    padding: 20px 12px 16px;
+  }
+
+  .tabs {
+    padding: 0 12px;
+  }
+
+  .main-content {
+    padding: 20px 12px;
+    padding-bottom: 120px;
+  }
+
+  .tab {
+    font-size: 14px;
+    padding: 6px 12px;
+  }
+}

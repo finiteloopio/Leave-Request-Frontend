@@ -1,0 +1,10 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #fff; /* Change to white */
+  color: #333;
+  overflow: hidden;
+}
+code {
+  font-family: Consolas, 'Courier New', monospace;
+}

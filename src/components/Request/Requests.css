@@ -1,0 +1,140 @@
+.requests-container {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.request-card {
+  background: white;
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.2s ease;
+}
+
+.request-card:hover {
+  box-shadow: 0 4px 12px rgba(210, 208, 208, 0.1);
+}
+
+.request-header {
+  
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 16px;
+  
+}
+
+.request-title-section {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.request-type {
+  font-size: 18px;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin: 0;
+}
+
+.status-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.status-badge.pending {
+  background: #fef3c7;
+  color: #92400e;
+}
+
+.status-badge.approved {
+  background: #000000;
+  color: #ffffff;
+}
+
+.status-badge.rejected {
+  background: #fee2e2;
+  color: #991b1b;
+}
+
+.action-buttons {
+  display: flex;
+  gap: 8px;
+}
+
+.action-btn {
+  width: 40px;
+  height: 40px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+}
+
+.approve-btn {
+  background: #000000;
+  color: white;
+}
+
+.approve-btn:hover {
+  background: #333333;
+  transform: translateY(-2px);
+}
+
+.reject-btn {
+  background: #dc2626;
+  color: white;
+}
+
+.reject-btn:hover {
+  background: #b91c1c;
+  transform: translateY(-2px);
+}
+
+
+
+.employee-name {
+  font-size: 15px;
+  color: #6b7280;
+  margin: 0;
+}
+
+.request-date {
+  font-size: 14px;
+  color: #6b7280;
+  margin: 0;
+}
+
+.duration {
+  font-size: 14px;
+  color: #6b7280;
+  margin: 0;
+}
+
+.request-reason {
+  font-size: 15px;
+  color: #1a1a1a;
+  margin: 4px 0 0 0;
+}
+
+.empty-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 20px;
+  color: #9ca3af;
+}
+
+.empty-state p {
+  margin-top: 16px;
+  font-size: 16px;
+}

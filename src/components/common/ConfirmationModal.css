@@ -1,0 +1,94 @@
+/* Enhanced Overlay Style */
+.confirmation-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(
+    17,
+    24,
+    39,
+    0.6
+  ); /* Darker overlay using Tailwind gray-900 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  padding: 16px;
+  /* Basic backdrop blur effect (support varies) */
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+}
+
+/* Enhanced Modal Content Style */
+.confirmation-modal-content {
+  background-color: white;
+  padding: 32px; /* Increased padding */
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15); /* Softer shadow */
+  max-width: 400px;
+  width: 100%;
+  text-align: center;
+  border: 1px solid #e5e7eb; /* Subtle border */
+}
+
+.confirmation-modal-message {
+  font-size: 18px; /* Slightly larger text */
+  color: #374151; /* Tailwind gray-700 */
+  margin: 0 0 28px 0; /* Increased bottom margin */
+  line-height: 1.6;
+}
+
+.confirmation-modal-actions {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+}
+
+/* Enhanced Button Styles */
+.modal-btn {
+  border: none;
+  padding: 10px 20px; /* Adjusted padding */
+  border-radius: 8px;
+  font-size: 15px; /* Slightly larger font */
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.1s;
+  display: inline-flex; /* Align icon and text */
+  align-items: center;
+  gap: 8px; /* Space between icon and text */
+  min-height: 42px; /* Ensure height accommodates spinner */
+  justify-content: center; /* Center content (icon/text/spinner) */
+}
+
+.modal-btn:hover:not(:disabled) {
+  transform: translateY(-1px); /* Subtle lift on hover */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.modal-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.modal-btn.cancel-btn {
+  background-color: #ffffff;
+  color: #4b5563; /* Tailwind gray-600 */
+  border: 1px solid #d1d5db; /* Tailwind gray-300 */
+}
+.modal-btn.cancel-btn:hover:not(:disabled) {
+  background-color: #f9fafb; /* Tailwind gray-50 */
+}
+
+.modal-btn.confirm-btn {
+  background-color: #dc2626; /* Tailwind red-600 */
+  color: white;
+}
+.modal-btn.confirm-btn:hover:not(:disabled) {
+  background-color: #b91c1c; /* Tailwind red-700 */
+}
+
+/* Center spinner within button */
+.modal-btn .spinner {
+  margin: 0 auto;
+}

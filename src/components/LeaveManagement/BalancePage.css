@@ -1,0 +1,77 @@
+/* Balance Page Styles */
+.balance-page {
+  width: 100%;
+   min-height: min-content; /* Allow natural height expansion */
+}
+
+.balance-title {
+  font-size: 20px;
+  font-weight: 600;
+  color: #111827;
+  margin: 0 0 8px 0;
+}
+
+.balance-subtitle {
+  color: #6b7280;
+  margin: 0 0 32px 0;
+  font-size: 14px;
+}
+
+.balance-cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+.balance-card {
+  background-color: #f3f4f6;
+  border-radius: 12px;
+  padding: 24px;
+  text-align: left;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.balance-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.balance-number {
+  font-size: 32px;
+  font-weight: bold;
+  color: #111827;
+  margin-bottom: 8px;
+  line-height: 1;
+}
+
+.balance-label {
+  color: #6b7280;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .balance-cards {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .balance-number {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 480px) {
+  .balance-cards {
+    gap: 12px;
+  }
+
+  .balance-card {
+    padding: 20px;
+  }
+
+  .balance-number {
+    font-size: 24px;
+  }
+}

@@ -1,0 +1,77 @@
+/* Styles for the ActionSection component on the Dashboard */
+.section {
+  background-color: #ffffff;
+  border: 1px solid #e5e7eb; /* Light gray border */
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+  margin-bottom: 20px; /* Space between sections */
+}
+
+.section-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+/* Styles the icon passed in as a prop */
+.section-header svg {
+  color: #6b7280; /* Gray-500 */
+}
+
+.section-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #111827; /* Gray-900 */
+  margin: 0;
+  flex-grow: 1; /* Pushes the badge to the far right */
+}
+
+.pending-badge {
+  background-color: #fef3c7; /* Yellow-100 */
+  color: #92400e; /* Yellow-800 */
+  font-size: 12px;
+  font-weight: 500;
+  padding: 4px 10px;
+  border-radius: 16px;
+  flex-shrink: 0; /* Prevents badge from shrinking */
+}
+
+/* --- This is the fix for the 50/50 button layout --- */
+.action-buttons {
+  display: flex; /* Use Flexbox */
+  gap: 12px; /* Space between the buttons */
+}
+
+.primary-button,
+.secondary-button {
+  flex: 1; /* This is the key: makes both buttons share the space equally */
+  padding: 12px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-align: center;
+}
+
+/* Primary Button (dark) */
+.primary-button {
+  background-color: #111827; /* Dark gray/black */
+  color: white;
+  border: 1px solid #111827;
+}
+.primary-button:hover {
+  background-color: #374151; /* Darker gray */
+}
+
+/* Secondary Button (light) */
+.secondary-button {
+  background-color: #ffffff;
+  color: #374151; /* Gray-700 */
+  border: 1px solid #d1d5db; /* Gray-300 */
+}
+.secondary-button:hover {
+  background-color: #f9fafb; /* Gray-50 */
+}
