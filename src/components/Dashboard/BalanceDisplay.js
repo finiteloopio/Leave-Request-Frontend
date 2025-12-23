@@ -44,7 +44,7 @@ const BalanceDisplay = ({ balanceTypesToShow }) => {
     { id: "vacation", type: "Vacation Leave", count: balances.VacationLeave },
     { id: "sick", type: "Sick Leave", count: balances.SickLeave },
     { id: "personal", type: "Personal Leave", count: balances.PersonalLeave },
-    { id: "wfh", type: "WFH Days", count: balances.WFHBalance },
+    // { id: "wfh", type: "WFH Days", count: balances.WFHBalance },
   ];
 
   // Filter the balances based on the prop passed from the parent
