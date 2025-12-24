@@ -68,7 +68,7 @@ const LoginPage = ({ onLoginSuccess }) => {
           backgroundColor: "#0078d4",
           color: "white",
           border: "none",
-          borderRadius: "4px",
+          borderRadius: "5px",
           fontWeight: "500"
         }}
       >
